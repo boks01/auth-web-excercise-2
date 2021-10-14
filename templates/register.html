@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block content %}
+    <h1>Registering account</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flashes">
+                {% for i in messages %}
+                    <p>{{i}}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form action="{{url_for('register')}}" method="post" class="form-content">
+        <input name="name" placeholder="name" required="required" type="text"><br><br>
+        <input name="email" placeholder="email" required="required" type="text"><br><br>
+        <input name="password" placeholder="password" required="required" type="password"><br><br>
+        <input name="token" placeholder="token" required="required" type="password"><br><br>
+        <button type="submit" class="btn btn-success">Make new account</button>
+    </form>
+{% endblock %}

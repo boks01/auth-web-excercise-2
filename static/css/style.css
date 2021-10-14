@@ -1,0 +1,22 @@
+#content{
+    text-align: center;
+    padding: 100px 20px;
+    
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: rgb(255, 0, 0);
+}
+.login-btn{
+    margin: 10px;
+}
+input{
+    border-radius: 8px;
+    padding: 5px;
+}
+.flashes{
+    color: rgb(255, 0, 0);
+}

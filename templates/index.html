@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% block content %}
+    <h1>Authentication site</h1>
+    {% if logged_in %}
+        <p>you're already logged in!!!</p>
+    {% else %}
+        <a class="btn btn-danger login-btn" style="padding: 5px 90px;" href="{{url_for('login')}}">Login</a>
+        <p>Dont have any account?, <a href="{{url_for('register')}}">register</a></p>
+    {% endif %}
+{% endblock %}
